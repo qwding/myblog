@@ -22,6 +22,7 @@ theme = "hugo-geo"
     github = "https://github.com/qwding"
     linkedin = "https://linkedin.com"
     email = "edcapding@gmail.com"
+    codeurl = "https://github.com/qwding/myblog/tree/master/content" # 如果想直接进入编辑页面将tree改成edit，但是进入的很慢
 
     # Sidebar profile picture
     profilepic = "img/dog.jpeg"
