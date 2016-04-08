@@ -4,4 +4,5 @@ tags = []
 description = ""
 title = "Page Title"
 highlight = true
+index = true
 +++
