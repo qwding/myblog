@@ -34,7 +34,7 @@ theme = "hugo-geo"
     # Nav links below the profile picture
     [[params.navlinks]]
     name = "About"
-    url = ""
+    url = "about"
 
     [[params.navlinks]]
     name = "Blog"
@@ -43,3 +43,7 @@ theme = "hugo-geo"
     [[params.navlinks]]
     name = "Persional"
     url = "persional/"
+
+    [[params.navlinks]]
+    name = "Relax"
+    url = "relax/"
