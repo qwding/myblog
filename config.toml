@@ -10,13 +10,14 @@ theme = "hugo-geo"
 [taxonomies]
     tag = "tags"
     persional = "persionals"
+    relax = "relaxs"
 
 [params]
     # Render the rotating globe in the sidebar
     showglobe = true
 
     # Google Analytics
-    analytics = "SHORT-CODE-HERE"
+    analytics = "UA-76467136-1"
 
     # Social buttons for sidebar
     github = "https://github.com/qwding"
