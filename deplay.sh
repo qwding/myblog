@@ -17,6 +17,8 @@ cd ..
 
 hugo 
 
+cp CNAME public/CNAME
+
 cd public
 git add -A
 git commit -m "$msg"
