@@ -1,6 +1,6 @@
 +++
 date = "2016-04-08T18:51:19+08:00"
-description = "contrast hugo and hexo"
+description = "contrast hugo with hexo"
 highlight = true
 tags = ["hugo","hexo"]
 title = "hugo vs hexo"
