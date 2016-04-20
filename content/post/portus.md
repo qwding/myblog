@@ -124,3 +124,11 @@ docker run -d \
 
 	修复方法： 直接到数据库的registry表将地址改成域名就行。
 2. 2.0.3版本可以登录，但是还是401. 应该是rails的不同版本的bundle不一样吧，没找解决办法。还是直接改回了master版本。
+3. push镜像的时候报错：
+```
+Error parsing HTTP response: invalid character '<' looking for beginning of value: "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n<hr><center>nginx/1.9.14</center>\r\n</body>\r\n</html>\r\n"
+
+```
+这个问题是因为我们使用了http，并配置了nginx，但是默认只有https才允许有basic auth，所以认证失败了。换成https就行。
+issue地址：https://github.com/docker/docker-registry/issues/298#issuecomment-39845868
+
