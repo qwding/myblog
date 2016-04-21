@@ -1,4 +1,4 @@
-BaseURL = "http://qwding.github.io/"
+BaseURL = "http://blog.qwding.com/"
 relativeURLs = false
 languageCode = "zh-cn"
 title = "qwding的blog"
