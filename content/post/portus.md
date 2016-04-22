@@ -123,13 +123,17 @@ docker run -d \
 	后来突然想到，在登录第一次就配置了regitry server信息。应该是这个server名字改变了，所以拒绝了访问。
 
 	修复方法： 直接到数据库的registry表将地址改成域名就行。
-2. 2.0.3版本可以登录，但是还是401. 应该是rails的不同版本的bundle不一样吧，没找解决办法。还是直接改回了master版本。
-3. push镜像的时候报错：
+2. push镜像的时候报错：
 ```
 Error parsing HTTP response: invalid character '<' looking for beginning of value: "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>413 Request Entity Too Large</h1></center>\r\n<hr><center>nginx/1.9.14</center>\r\n</body>\r\n</html>\r\n"
 ```
-
 这个问题是因为我们使用了http，并配置了nginx，但是默认只有https才允许有basic auth，所以认证失败了。换成https就行。
-
 issue地址：https://github.com/docker/docker-registry/issues/298#issuecomment-39845868
+
+3. portus读配置的顺序 配置文件 > -e 参数.
+4. registry可以不配置auth并使用portus的，登录portus时候添加registry skip error就可以，但是使用的时候会报很多错误，语言bug，改改代码就ok。
+5. registry 的issuer 对应的就是portus/config/FQDN的value，文档没有说明白，坑的一逼。
+6. 没有api，如果不想直接操作web来创建用户等，就需要自己写方法去操作数据库了。
+
+
 
