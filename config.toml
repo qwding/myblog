@@ -11,6 +11,7 @@ theme = "hugo-geo"
     tag = "tags"
     persional = "persionals"
     relax = "relaxs"
+    categorie = "categories"
 
 [params]
     # Render the rotating globe in the sidebar

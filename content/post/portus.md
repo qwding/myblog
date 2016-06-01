@@ -1,8 +1,9 @@
-+++
+
 date = "2016-04-20T11:48:19+08:00"
 description = "contrast hugo with hexo"
 highlight = true
 tags = ["portus","registry"]
+categories = ["categoriestest"]
 title = "portus的docker容器搭建"
 index = true
 +++
