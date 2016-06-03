@@ -1,0 +1,50 @@
+BaseURL = "http://blog.qwding.com/"
+relativeURLs = false
+languageCode = "zh-cn"
+title = "qwding的blog"
+disqusShortname = "puppy"
+paginate = 5
+theme = "hugo-future-imperfect"
+
+
+[taxonomies]
+    tag = "tags"
+    persional = "persionals"
+    relax = "relaxs"
+
+[params]
+    # Render the rotating globe in the sidebar
+    showglobe = true
+
+    # Google Analytics
+    analytics = "UA-76467136-1"
+
+    # Social buttons for sidebar
+    github = "https://github.com/qwding"
+    linkedin = "https://linkedin.com"
+    email = "edcapding@gmail.com"
+    codeurl = "https://github.com/qwding/myblog/tree/master/content" # 如果想直接进入编辑页面将tree改成edit，但是进入的很慢
+
+    # Sidebar profile picture
+    profilepic = "img/dog.jpeg"
+
+    # Title/subtitle for the sidebar
+    title = "Qwding"
+    subtitle = "安逸是福"
+
+    # Nav links below the profile picture
+    [[params.navlinks]]
+    name = "About"
+    url = "about"
+
+    [[params.navlinks]]
+    name = "Blog"
+    url = "post/"
+
+    [[params.navlinks]]
+    name = "Persional"
+    url = "persional/"
+
+    [[params.navlinks]]
+    name = "Relax"
+    url = "relax/"

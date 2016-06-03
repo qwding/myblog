@@ -12,15 +12,18 @@ git commit -m "$msg"
 git push origin master
 
 cd public
-rm -r $(ls)
-cd ..
+rm -rf $(ls)
+cd 
 
 hugo 
 
 cp CNAME public/CNAME
 
-cd public
+cd ../qwding.github.io
+rm -rf $(ls)
+cp ../myblog/public .
+
 git add -A
 git commit -m "$msg"
 git push origin master
-cd ../
+cd ../myblog
