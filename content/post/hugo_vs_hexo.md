@@ -1,10 +1,8 @@
 +++
 date = "2016-04-08T18:51:19+08:00"
 description = "contrast hugo with hexo"
-highlight = true
 categories = ["hugo","hexo"]
 title = "hugo vs hexo"
-index = true
 +++
 
 ### hugo 和 hexo 对比

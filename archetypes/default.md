@@ -1,8 +1,14 @@
 +++
+
+author = "qwding"
 draft = true
-tags = []
+categories = []
 description = ""
-title = "Page Title"
-highlight = true
-index = true
+title = ""
+linktitle = ""
+featured = ""
+featuredpath = ""
+featuredalt = ""
+
 +++
+
