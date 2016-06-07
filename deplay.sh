@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 msg="rebuilding site `date`"
@@ -13,16 +14,13 @@ git push origin master
 
 cd public
 rm -rf $(ls)
-cd 
+cd .. 
 
 hugo 
 
 cp CNAME public/CNAME
 
-cd ../qwding.github.io
-rm -rf $(ls)
-cp ../myblog/public .
-
+cd public
 git add -A
 git commit -m "$msg"
 git push origin master
