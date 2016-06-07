@@ -8,7 +8,6 @@ title = ""
 linktitle = ""
 featured = ""
 featuredpath = ""
-featuredalt = ""
 
 +++
 
