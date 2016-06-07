@@ -3,7 +3,7 @@ date = "2016-04-08T12:06:31+08:00"
 title = "矫情"
 highlight = true
 description = "unreasonable."
-tags = ["live"]
+categories = ["live"]
 index = true
 +++
 

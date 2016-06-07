@@ -3,7 +3,7 @@ date = "2016-06-01T19:19:58+08:00"
 description = "测试修改实例地址后地址如何变化"
 highlight = true
 index = true
-tags = ["golang","pointer"]
+categories = ["golang","pointer"]
 title = "golang 在实例方法内修改实例地址测试"
 
 +++

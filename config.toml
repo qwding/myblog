@@ -1,51 +1,101 @@
-BaseURL = "http://blog.qwding.com/"
-relativeURLs = false
-languageCode = "zh-cn"
-title = "qwding的blog"
+baseurl = "http://blog.qwding.com/"
+languageCode = "en-us"
+title = "QWDing blog"
+theme = "hugo-future-imperfect"
+preserveTaxonomyNames = true
+paginate = 3
 disqusShortname = "puppy"
-paginate = 5
-theme = "hugo-geo"
-
-
-[taxonomies]
-    tag = "tags"
-    persional = "persionals"
-    relax = "relaxs"
-    categorie = "categories"
+googleAnalytics = ""
 
 [params]
-    # Render the rotating globe in the sidebar
-    showglobe = true
+    # Sets the meta tag description, usually reserved for the main page
+    description          = "懒癌晚期"
+    # This will appear on the top left of the navigation bar
+    navbarTitle          = "QWDing blog"
+    # Social media buttons that appear on the sidebar
+    socialAppearAtTop    = true
+    socialAppearAtBottom = true
+    # set this to the section name if section is not post
+    viewMorePostLink     = "/"
 
-    # Google Analytics
-    analytics = "UA-76467136-1"
+# Optional Params
+    categoriesByCount    = true
+    includeReadingTime   = true
+    # The set of favicons used are based on the write-up from this link:
+    # https://github.com/audreyr/favicon-cheat-sheet
+    # Please see the favicon partial template for more information
+    loadFavicon          = false
+    faviconVersion       = ""
 
-    # Social buttons for sidebar
-    github = "https://github.com/qwding"
-    linkedin = "https://linkedin.com"
-    email = "edcapding@gmail.com"
-    codeurl = "https://github.com/qwding/myblog/tree/master/content" # 如果想直接进入编辑页面将tree改成edit，但是进入的很慢
+    # Load custom CSS or JavaScript files. This replaces the deprecated params
+    # minifiedFilesCSS and minifiedFilesJS. The variable is an array so that you
+    # can load multiple files if necessary. You can also load the standard theme
+    # files by adding the value, "default".
+    # customCSS            = ["default", "/path/to/file"]
+    # customJS             = ["default", "/path/to/file"]
 
-    # Sidebar profile picture
-    profilepic = "img/dog.jpeg"
+    # Loading min files for exampleSite
+    #customCSS            = ["/css/main.min.css"]
+    #customJS             = ["/js/main.min.js"]
 
-    # Title/subtitle for the sidebar
-    title = "Qwding"
-    subtitle = "安逸是福"
+# parms.intro will appear on the sidebar
+# This is optional, but it's suggested to use
+[params.intro]
+    header    = "QWDing blog"
 
-    # Nav links below the profile picture
-    [[params.navlinks]]
-    name = "About"
-    url = "about"
+    paragraph = "懒癌晚期"
 
-    [[params.navlinks]]
+    about     = "没错！懒癌晚期！就是爱打游戏！"
+
+# This will also appear on the sidebar.
+# A width of less than 100px is recommended
+# This is optional
+[params.intro.pic]
+    src       = "/img/dog.jpeg"
+    # modify your picture in the shape of a circle or
+    # future imperfect's hexagonal shape
+    circle    = false
+    imperfect = true
+    width     = ""
+    alt       = "Qwding blog"
+
+# Adjust the amount of recent posts on the sidebar.
+# This is optional. The default value 5 will be used
+[params.postAmount]
+    sidebar = 2
+
+# Set up your menu items in the navigation bar
+# You can use identifier to prepend a font awesome icon to your text
+[[menu.main]]
     name = "Blog"
-    url = "post/"
-
-    [[params.navlinks]]
-    name = "Persional"
-    url = "persional/"
-
-    [[params.navlinks]]
+    url = "/post"
+    identifier = "fa fa-newspaper-o"
+    weight = 1
+[[menu.main]]
     name = "Relax"
-    url = "relax/"
+    url = "/relax"
+    identifier = "fa fa-gamepad"
+    weight = 2
+[[menu.main]]
+    name = "Persional"
+    url = "/persional"
+    identifier = "fa fa-child"
+    weight = 3
+[[menu.main]]
+    name = "Categories"
+    url = "/categories"
+    identifier = "fa fa-tags"
+    weight = 4
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    identifier = "fa fa-info"
+    weight = 5
+
+# Insert your username and the icon will apear on the page as long as
+# socialAppearAtTop or socialAppearAtBottom is set to true in the params area
+# The social media icons will appear on the sidebar
+[social]
+    github          = "qwding"
+    email           = "edcapding@163.com"

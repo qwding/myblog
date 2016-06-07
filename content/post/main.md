@@ -3,7 +3,7 @@ date = "2016-04-08T11:57:57+08:00"
 title = "一个开始"
 highlight = true
 description = "One start."
-tags = ["live"]
+categories = ["live"]
 index = true
 +++
 

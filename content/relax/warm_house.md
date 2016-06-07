@@ -3,7 +3,7 @@ date = "2016-04-14T18:18:02+08:00"
 description = ""
 highlight = true
 index = true
-tags = ["game"]
+categories = ["game"]
 title = "温暖的木屋"
 
 +++
