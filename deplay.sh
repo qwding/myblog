@@ -12,6 +12,8 @@ git add -A
 git commit -m "$msg"
 git push origin master
 
+
+echo -e "\033[0;32mDelete public folder and generate new files...\033[0m"
 cd public
 rm -rf $(ls)
 cd .. 
@@ -21,6 +23,8 @@ hugo
 cp CNAME public/CNAME
 
 cd public
+
+echo -e "\033[0;32mCommit new html files...\033[0m"
 git add -A
 git commit -m "$msg"
 git push origin master
