@@ -20,7 +20,6 @@ cd ..
 
 hugo 
 
-cp CNAME public/CNAME
 
 cd public
 
