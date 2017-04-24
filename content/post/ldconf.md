@@ -34,6 +34,8 @@ ldconfig -l /lib64/libc.so.6 /lib64/libc-2.12.so
 
 ### ldconfig
 
+写的感觉不错的链接：[http://blog.csdn.net/unix21/article/details/12119861](http://blog.csdn.net/unix21/article/details/12119861)
+
 主要还是管理linux的动态链接库的，安装动态链接库以后，需要将库目录放到 /etc/ld.so.conf 里面，再执行ldconfig，这时候会将库的信息放到  /etc/ld.so.cache（高速缓存机制）。 系统在使用库时候先去 /etc/ld.so.cache 目录下找，找到了再去 /etc/ld.so.conf 目录下找。所以如果  /etc/ld.so.cache 没有，那就找不到。到这里也就明白了，新加库，就要执行ldconfig，但是更新的话就不需要了
 
 ### linux博大精深
