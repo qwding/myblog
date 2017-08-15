@@ -16,3 +16,4 @@ https://harrynull.tech/cipher
 
 很烧脑，费了2个小时，才过到了第14关，过不动了，据说有34关。佩服各位大神
 
+解密或许在这里可以找到答案：https://www.v2ex.com/t/382225?p=1
