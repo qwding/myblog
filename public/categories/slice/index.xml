@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slice on QWDing blog</title>
+    <link>http://qwding.github.io/categories/slice/</link>
+    <description>Recent content in Slice on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2016 19:19:58 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/slice/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How golang slice Semi - pointer.</title>
+      <link>http://qwding.github.io/post/slice_args/</link>
+      <pubDate>Sun, 09 Oct 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/slice_args/</guid>
+      <description>起因 刷leetcode的77题时候，使用了递归方法，并且使用数组时候如下
+result := make([][]int, 0, length+1) recursive([]int{}, 1, n, k, result)  第一次使用了cap声明slice，这样的好处是append时候在length后添加数据，并且保证长度够，append时候不会重新申请地址
+但是跑的时候发现，recursive()后，在返回到此段代码，居然什么都没有！result值没变。
+什么？ slice不是传说的指针传递么？ 先看下官方数组结构样子 当然，一直知道数组是半指针，就是将数组的地址的值传进去。在函数里是改变不了指针的值，但是可以操作指针指向的数据，详细的google有很多
+我想象的是这样：函数收到的是数组的头地址(就是图最上面的指针）,length和cap等数据，这样可以完全接管数组的操作了
+但是上述起因里出现的问题却不是这样，到底是什么原因呢？于是写了测试代码
+func main() { result := make([]int, 0, 10) addr := &amp;amp;result fmt.Println(&amp;quot;result:&amp;quot;, result, &amp;quot;addr:&amp;quot;, unsafe.Pointer(addr)) for i := 0; i &amp;lt; 10; i++ { functions(result) result = append(result, i) //appendData(result,i) } fmt.Println(&amp;quot;result:&amp;quot;, result, &amp;quot;addr:&amp;quot;, unsafe.Pointer(addr)) } func functions(arr []int) { addr := &amp;amp;arr if len(arr) &amp;gt; 0 { fmt.</description>
+    </item>
+    
+    <item>
+      <title>go map,slice,array 遍历性能测试 </title>
+      <link>http://qwding.github.io/post/gotest_map_array_slice/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/gotest_map_array_slice/</guid>
+      <description>#就是随便试试 听说goalng的map和slice的遍历性能差的不是一点半点，于是没事写个benchmark来玩玩 代码
+package testings import( &amp;quot;testing&amp;quot; &amp;quot;strconv&amp;quot; ) var length = 1000 var maps map[string]string var slices []string var arrays [1000]string func init(){ maps = make(map[string]string,length) slices = make([]string,length) for i:=0;i&amp;lt;length;i++{ maps[strconv.Itoa(i)] = &amp;quot;abc&amp;quot; slices[i] = &amp;quot;abc&amp;quot; arrays[i] = &amp;quot;abc&amp;quot; } } func BenchmarkIterateMap(b *testing.B){ for i:=0;i&amp;lt;b.N;i++{ for _,_ = range maps{ } } } func BenchmarkIterateSlices(b *testing.B){ for i:=0;i&amp;lt;b.N;i++{ for _,_ = range slices{ } } } func BenchmarkIterateArrays(b *testing.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on QWDing blog</title>
+    <link>http://qwding.github.io/categories/shell/</link>
+    <description>Recent content in Shell on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jun 2016 19:19:58 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>shell execute mongo/mysql which start by docker.</title>
+      <link>http://qwding.github.io/post/shell_exec_db/</link>
+      <pubDate>Tue, 07 Jun 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/shell_exec_db/</guid>
+      <description>#问题初衷 打算一键部署带权限验证的mongo。但是docker hub官方镜像创建mongo步骤为：
+docker run --name mongodb -d -p 27017:27017 mongo:3.3 --auth docker exec -it mongodb mongo admin db.createUser({ user: &#39;root&#39;, pwd: &#39;root&#39;, roles: [ { role: &amp;quot;root&amp;quot;, db: &amp;quot;admin&amp;quot; } ] });  打算将其做成脚本
+#用shell实现 经过查阅，发现shell的 &amp;lt;&amp;lt;EOF 可以实现，查阅资料 http://my.oschina.net/u/1032146/blog/146941
+应该可以实现,于是写了脚本
+#!/bin/bash mongo admin &amp;lt;&amp;lt; EOF db.createUser({ user: &#39;root&#39;, pwd: &#39;root&#39;, roles: [ { role: &amp;quot;root&amp;quot;, db: &amp;quot;admin&amp;quot; } ] }); exit; EOF  在mongo 启动的容器内执行脚本，成功！
+#直接写脚本启动容器(error) !/bin/bash docker run --name mongodb -d -p 27017:27017 dhub.</description>
+    </item>
+    
+  </channel>
+</rss>
