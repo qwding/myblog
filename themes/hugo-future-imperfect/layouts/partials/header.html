@@ -6,6 +6,7 @@
 -->
 <html>
     <head>
+        {{ partial "seo_schema" . }}
         {{ with $.Scratch.Get "generalTitle" }}
             <title>{{ . }}</title>
         {{ else }}
@@ -34,17 +35,14 @@
 
         {{ template "_internal/twitter_cards.html" . }}
         {{ template "_internal/opengraph.html" . }}
+        <meta property="og:image" content="{{ .Site.BaseURL }}/images/logo.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
         {{ template "_internal/schema.html" . }}
         {{ template "_internal/google_news.html" . }}
 
-        <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
-
-        <!-- Keeping the deprecated param, minifiedFilesCSS, for now. The new param
-             that replaces this is customCSS. Utilizing a scratch variable cssFiles
-             to keep the deprecated param. -->
-        {{ if isset .Site.Params "minifiedFilesCSS" }}
-            {{ $.Scratch.Set "cssFiles" .Site.Params.minifiedFilesCSS }}
-        {{ else if isset .Site.Params "customCSS" }}
+        {{ if isset .Site.Params "customcss" }}
             {{ $.Scratch.Set "cssFiles" .Site.Params.customCSS }}
         {{ else }}
             {{ $.Scratch.Set "cssFiles" false }}
@@ -53,28 +51,33 @@
         <!-- If the value "default" is passed into the param then we will first
              load the standard css files associated with the theme -->
         {{ if or (in ($.Scratch.Get "cssFiles") "default") (eq ($.Scratch.Get "cssFiles") false) }}
-            <link rel="stylesheet" href="/css/google-font.css" />
-            <link rel="stylesheet" href="/css/font-awesome.min.css" />
-            <link rel="stylesheet" href="/css/main.css" />
-            <link rel="stylesheet" href="/css/add-on.css" />
-            <link rel="stylesheet" href="/css/monokai-sublime.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+            <link rel="stylesheet" href="{{ "css/add-on.css" | relURL }}">
+            <link rel="stylesheet" href="{{ "css/academicons.min.css" | relURL }}">
         {{ end }}
 
         {{ if ne ($.Scratch.Get "cssFiles") false }}
             {{ range $.Scratch.Get "cssFiles" }}
                 {{ if ne . "default" }}
-                    <link rel="stylesheet" href="{{ . }}" />
+                    <link rel="stylesheet" href="{{ . | relURL }}">
                 {{ end }}
             {{ end }}
         {{ end }}
 
-        <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-        <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-        {{ if not (in (printf "%#v" .Site.BaseURL) "localhost") }}
-            {{ template "_internal/google_analytics.html" . }}
-        {{ end }}
+{{ if (not .Params.disable_highlight) }}
+  {{ $highTheme := .Site.Params.highlightjsTheme }}
+    {{ with .Site.Params.highlightjsVersion }}
+    <link href='{{ $.Site.Params.highlightjsCDN | default "//cdn.bootcss.com" }}/highlight.js/{{ . }}/styles/{{ $highTheme }}.min.css' rel='stylesheet' type='text/css' />
+  {{ end }}
+{{ end }}
+
+      {{ template "_internal/google_analytics.html" . }}
     </head>
     <body>
 
-        <!-- Wrapper -->
-        <div id="wrapper">
+      <!-- Wrapper -->
+      <div id="wrapper">

@@ -1,43 +1,82 @@
 <!-- Social Share Button HTML -->
 
 <!-- Twitter -->
-<li><a href="//twitter.com/share?url={{ .Permalink }}&text={{ .Title }}&via={{ .Site.Social.twitter }}" target="_blank" class="share-btn twitter">
+{{ if .Site.Params.socialShareTwitter | default true}}
+<li>
+  <a href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
-</a></li>
+    </a>
+</li>
+{{ end }}
 
 <!-- Google Plus -->
-<li><a href="//plus.google.com/share?url={{ .Permalink }}" target="_blank" class="share-btn google-plus">
+{{ if .Site.Params.socialShareGoogleplus | default true}}
+<li>
+  <a href="//plus.google.com/share?url={{ .Permalink }}" target="_blank" class="share-btn google-plus">
     <i class="fa fa-google-plus"></i>
     <p>Google+</p>
-</a></li>
+  </a>
+</li>
+{{ end }}
 
 <!-- Facebook -->
-<li><a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="share-btn facebook">
+{{ if .Site.Params.socialShareFacebook | default true}}
+
+<li>
+  <a href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="share-btn facebook">
     <i class="fa fa-facebook"></i>
     <p>Facebook</p>
-</a></li>
+    </a>
+</li>
+{{ end }}
 
-<!-- Reddit (url, title) -->
-<li><a href="//reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share-btn reddit">
+<!-- Reddit -->
+{{ if .Site.Params.socialShareReddit | default true}}
+<li>
+  <a href="//reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" class="share-btn reddit">
     <i class="fa fa-reddit-alien"></i>
     <p>Reddit</p>
-</a></li>
+  </a>
+</li>
+{{ end }}
 
 <!-- LinkedIn -->
-<li><a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share-btn linkedin">
-    <i class="fa fa-linkedin"></i>
-    <p>LinkedIn</p>
-</a></li>
+{{ if .Site.Params.socialShareLinkedin | default true}}
+<li>
+  <a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+{{ end }}
 
-<!-- StumbleUpon (url, title) -->
-<li><a href="//www.stumbleupon.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share-btn stumbleupon">
+<!-- StumbleUpon -->
+{{ if .Site.Params.socialShareStumbleupon | default true}}
+<li>
+  <a href="//www.stumbleupon.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" class="share-btn stumbleupon">
     <i class="fa fa-stumbleupon"></i>
     <p>StumbleUpon</p>
-</a></li>
+  </a>
+</li>
+{{ end }}
+
+<!-- Pintrest -->
+{{ if .Site.Params.socialSharePinterest | default true}}
+<li>
+  <a href="//www.pinterest.com/pin/create/button/?url={{ .Permalink }}&amp;description={{ .Title }}" target="_blank" class="share-btn pinterest">
+    <i class="fa fa-pinterest-p"></i>
+    <p>Pinterest</p>
+  </a>
+</li>
+{{ end }}
 
 <!-- Email -->
-<li><a href="mailto:?subject=Check out this post by {{ .Params.author }}&body={{ .Permalink }}" target="_blank" class="share-btn email">
+{{ if .Site.Params.socialShareEmail | default true}}
+<li>
+  <a href="mailto:?subject=Check out this post by {{ .Params.author }}&amp;body={{ .Permalink }}" target="_blank" class="share-btn email">
     <i class="fa fa-envelope"></i>
     <p>Email</p>
-</a></li>
+  </a>
+</li>
+{{ end }}

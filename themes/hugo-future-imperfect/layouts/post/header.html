@@ -1,21 +1,17 @@
 <header>
     <div class="title">
         {{ if $.Scratch.Get "h1" }}
-            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
             {{ $.Scratch.Set "h1" false }}
         {{ else }}
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ end }}
         {{ with .Description }}
             <p>{{ . }}</p>
         {{ end }}
     </div>
     <div class="meta">
-        {{ if .Site.Params.orderByPublishDate }}
-            {{ $.Scratch.Set "dateType" .PublishDate }}
-        {{ else }}
-            {{ $.Scratch.Set "dateType" .Date }}
-        {{ end }}
+        {{ $.Scratch.Set "dateType" .Date }}
 
         <time class="published"
             datetime='{{ ($.Scratch.Get "dateType").Format "2006-01-02" }}'>

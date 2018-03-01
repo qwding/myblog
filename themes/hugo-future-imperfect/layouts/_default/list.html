@@ -4,14 +4,10 @@
     {{ partial "navbar" . }}
     <!-- Main -->
     <div id="main">
-        <!-- Please note that the param orderByPublishDate is no longer being used
-             since the pagination is not what is expected. Use at your own risk! -->
-          {{ range .Data.Pages.GroupByDate "2006" }}
-          <h2>{{ .Key }}</h2>
-          {{ range .Pages }}
-             {{ .Render "content-list" }}
-            {{end}}
-          {{ end }}
+        {{ $paginator := .Paginate .Data.Pages }}
+        {{ range .Paginator.Pages }}
+            {{ .Render "content-list" }}
+        {{ end }}
 
         {{ partial "pagination" . }}
     </div>
