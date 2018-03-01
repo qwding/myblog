@@ -37,7 +37,7 @@
 
 
 
-<meta property="og:updated_time" content="2016-11-25T12:48:31&#43;08:00"/>
+<meta property="og:updated_time" content="2017-02-21T15:05:28&#43;08:00"/>
 
 
 
@@ -232,11 +232,11 @@
 
                 
                     <li>
-                        <a href="http://qwding.github.io/post/vim_golang/"><p>用vim写golang踩坑</p></a>
+                        <a href="http://qwding.github.io/post/vim_python_ycm/"><p>解决python 的ycm跳转不好使</p></a>
                     </li>
                 
                     <li>
-                        <a href="http://qwding.github.io/post/vim_config/"><p>转战vim</p></a>
+                        <a href="http://qwding.github.io/post/vim_golang/"><p>用vim写golang踩坑</p></a>
                     </li>
                 
             </ul>
@@ -252,6 +252,78 @@
           
           <h2>2018</h2>
           
+             <article class="post">
+    <header>
+    <div class="title">
+        
+            <h2><a href="http://qwding.github.io/post/vim_python_ycm/">解决python 的ycm跳转不好使</a></h2>
+        
+        
+            <p>resolve python ycm not work</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2018-03-01'>
+            March 1, 2018</time>
+        <span class="author">qwding</span>
+        
+            <p>3 minute read</p>
+        
+        
+    </div>
+</header>
+
+    
+
+    <p>年前折腾很久，终于把golang vim折腾好了，结果发现python ycm不好使了，很头痛
+今天解决了，记录下过程
+ 查阅日志，进入到vim进行跳转操作，输入命令YcmDebugInfo，打印出来信息，及日志存储位置 查阅日志，发现报了Max retries exceeded with url: /ready ,并且发现1的日志的server端口和这个访问的端口不同 查阅issue，发现有人在linux下编译是不支持anaconda版本python的，是不是我mac 的 python版本选择有问题？ 再次查阅日志，发现server和vim用的不是一个python版本，于是在vimrc里同时配置了  let g:ycm_python_binary_path = &lsquo;/usr/local/bin/python2.7&rsquo; let g:ycm_server_python_interpreter = &lsquo;/usr/local/bin/python2.7&rsquo;  编译后发现好使了，很开心，但是出现另一个问题，系统经常报python崩溃了&hellip; 我也快崩溃了 改用python3编译，虽然编译时候还是报了一个require 3.3我用的是3.6，但是编译完后发现好使了，也没有报python崩溃  贴下现在配置
+ if &amp;compatible set nocompatible &quot;去掉有关vi一致性模式，避免以前版本的bug和局限 end set rtp+=~/.vim/bundle/Vundle.vim call vundle#rc() Bundle &lsquo;VundleVim/Vundle.vim&rsquo; Bundle &lsquo;Valloric/YouCompleteMe&rsquo; Bundle &lsquo;dyng/ctrlsf.vim&rsquo;  Bundle &lsquo;kien/ctrlp.vim&rsquo; Bundle &lsquo;scrooloose/nerdtree&rsquo; Bundle &lsquo;scrooloose/syntastic&rsquo; Bundle &lsquo;altercation/vim-colors-solarized&rsquo; Bundle &lsquo;majutsushi/Tagbar&rsquo; Bundle &lsquo;vim-airline/vim-airline&rsquo; Bundle &lsquo;vim-airline/vim-airline-themes&rsquo; &quot; 括号成对跳转 % 跳转 Bundle &lsquo;tmhedberg/matchit&rsquo; &quot; 多光标操作 Bundle &lsquo;terryma/vim-multiple-cursors&rsquo; &quot; , = 对齐 Bundle &lsquo;godlygeek/tabular&rsquo; &quot; 自动补全括号 Bundle &lsquo;jiangmiao/auto-pairs&rsquo; &quot; 多层括号变色 Bundle &lsquo;luochen1990/rainbow&rsquo; &quot; 保存vim编辑信息，比如最后的位置 Bundle &lsquo;vim-scripts/restore_view.</p>
+
+    <footer>
+        <ul class="actions">
+            <li><a href="http://qwding.github.io/post/vim_python_ycm/" class="button big">Continue Reading</a></li>
+        </ul>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+                        <i class="fa fa-tags">&nbsp;</i>
+                    
+
+                    
+                        Category
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categoriesvim'>vim</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+
+            
              <article class="post">
     <header>
     <div class="title">
@@ -1854,13 +1926,13 @@ FROM library/rails:4.2.2 MAINTAINER Flavio Castelli &lt;fcastelli@suse.com&gt; E
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://qwding.github.io/post/vim_golang/">用vim写golang踩坑</a></h3>
+                                <h3><a href="http://qwding.github.io/post/vim_python_ycm/">解决python 的ycm跳转不好使</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2018-02-12'>
-                                    February 12, 2018</time>
+                                    '2018-03-01'>
+                                    March 1, 2018</time>
                             </header>
                         </article>
                     </li>
@@ -1868,13 +1940,13 @@ FROM library/rails:4.2.2 MAINTAINER Flavio Castelli &lt;fcastelli@suse.com&gt; E
                     <li>
                         <article>
                             <header>
-                                <h3><a href="http://qwding.github.io/post/vim_config/">转战vim</a></h3>
+                                <h3><a href="http://qwding.github.io/post/vim_golang/">用vim写golang踩坑</a></h3>
                                 
                                     
                                 
                                 <time class="published" datetime=
-                                    '2018-01-24'>
-                                    January 24, 2018</time>
+                                    '2018-02-12'>
+                                    February 12, 2018</time>
                             </header>
                         </article>
                     </li>
@@ -1948,6 +2020,15 @@ FROM library/rails:4.2.2 MAINTAINER Flavio Castelli &lt;fcastelli@suse.com&gt; E
                     <li>
                         <article>
                             <header>
+                                <a href="/categories/vim/">vim</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
                                 <a href="/categories/linux/">linux</a>
                                 <span style="float:right;">2</span>
                             </header>
@@ -1985,15 +2066,6 @@ FROM library/rails:4.2.2 MAINTAINER Flavio Castelli &lt;fcastelli@suse.com&gt; E
                         <article>
                             <header>
                                 <a href="/categories/slice/">slice</a>
-                                <span style="float:right;">2</span>
-                            </header>
-                        </article>
-                    </li>
-                
-                    <li>
-                        <article>
-                            <header>
-                                <a href="/categories/vim/">vim</a>
                                 <span style="float:right;">2</span>
                             </header>
                         </article>
