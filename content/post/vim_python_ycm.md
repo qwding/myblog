@@ -1,6 +1,6 @@
 +++
 author = "qwding"
-categories = ["vim"]
+categories = ["vim", "python"]
 date = "2018-03-01T10:28:28+08:00"
 description = "resolve python ycm not work"
 featured = ""
