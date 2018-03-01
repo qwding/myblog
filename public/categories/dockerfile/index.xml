@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dockerfile on QWDing blog</title>
+    <link>http://qwding.github.io/categories/dockerfile/</link>
+    <description>Recent content in Dockerfile on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Oct 2016 10:37:02 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/dockerfile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongo 备份</title>
+      <link>http://qwding.github.io/post/mongo_backup/</link>
+      <pubDate>Thu, 20 Oct 2016 10:37:02 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/mongo_backup/</guid>
+      <description>mongo 备份 秉承方便简单，易搭建原则，还是用docker来实现,镜像地址（https://hub.docker.com/r/carlding/mongobackup/）
+docker hub找到一个镜像，istepanov/mongodump可以实现本地monogo的备份，查阅其内部脚本，并没有开放传入远程数据库的接口，于是在此基础上改进
+Dockerfile
+FROM istepanov/mongodump ​MAINTAINER qwding ADD backup.sh backup.sh ADD start.sh start.sh  backup.sh
+#!/bin/bash set -e echo &amp;quot;Job started: $(date)&amp;quot; DATE=$(date +%Y%m%d_%H%M%S) FILE=&amp;quot;/backup/backup-$DATE.tar.gz&amp;quot; echo &amp;quot;mongodump -h $MONGO_PORT_27017_TCP_ADDR -p $MONGO_PORT_27017_TCP_PORT -u $MONGO_USER -p $MONGO_PASSWORD -d $MONGO_DB&amp;quot; mongodump -h $MONGO_PORT_27017_TCP_ADDR -u $MONGO_USER -p $MONGO_PASSWORD -d $MONGO_DB tar -zcvf $FILE dump/ rm -rf dump/ echo &amp;quot;Job finished: $(date)&amp;quot;  start.sh
+#!/bin/bash set -e CRON_SCHEDULE=${CRON_SCHEDULE:-0 1 * * *} if [[ &amp;quot;$1&amp;quot; == &#39;no-cron&#39; ]]; then exec /backup.</description>
+    </item>
+    
+  </channel>
+</rss>

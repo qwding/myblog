@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on QWDing blog</title>
+    <link>http://qwding.github.io/categories/hugo/</link>
+    <description>Recent content in Hugo on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Apr 2016 18:51:19 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo vs hexo</title>
+      <link>http://qwding.github.io/post/hugo_vs_hexo/</link>
+      <pubDate>Fri, 08 Apr 2016 18:51:19 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/hugo_vs_hexo/</guid>
+      <description> hugo 和 hexo 对比 主要是查阅了一下很多人经验，并汇总了一下对比结果
+ hexo hugo 速度 快 特别快 主题 几大主题基础上延伸,总量更多 很多,良好主题生态圈 安装及更新 更新容易有坑，因为依赖包 一个binary,安装更新快 评论系统 支持disqus等 支持disqus等 应用方面 博客适应性更强	非博客适应性更强 文档 有中文文档 文档超详细，中文不全 功能 分类,tag,多语言,i18n 分类,tag,series,wight,多语言  因为本身更喜欢golang，所以选择了hugo
+分享一下查阅的资料  十种静态页面生成工具
+ hexo 文档
+ hexo 中文文档
+ hexo 一篇比较好的使用文章
+ hugo 文档
+ hugo 中文文档
+ hugo 主题
+  gitlab pages gitlab 8.3以后也出了github pages的功能，但只限gitlab-ee版本，需要付费
+ gitlab-ee docker安装 gitlab pages使用  </description>
+    </item>
+    
+  </channel>
+</rss>

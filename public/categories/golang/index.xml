@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on QWDing blog</title>
+    <link>http://qwding.github.io/categories/golang/</link>
+    <description>Recent content in Golang on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Feb 2018 10:28:28 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用vim写golang踩坑</title>
+      <link>http://qwding.github.io/post/vim_golang/</link>
+      <pubDate>Mon, 12 Feb 2018 10:28:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/vim_golang/</guid>
+      <description>vim 写golang碰到的爽点 自从转到了vim写golang, 越用越觉得舒服，几个爽点IDE媲美不了
+ 返回上次动作地方，无论是跳文件还是跳操作行，都可以直接返回上次操作的地方，极舒服 根本不需要鼠标，不用写代码还感觉食指高度使用的难受了 可以装逼了  不爽  每摄入一门语言配环境是最折腾的，就像我的python环境还没配好，还用pycharm写呢 写golang时候居然有的不能跳转pkg 自动补全时候居然每次会卡1~2秒左右，不能忍啊！  不能跳转到pkg 开始以为是ctags的问题，但是发现有些pkg我并没有生成tags文件，但是还是能跳转过去，感觉ctags并不是我跳转的方式
+仔细阅读vim-go，发现是gocode配合YCM跳转的，那就去读gocode文档，发现不得了的事情
+gocode居然跳转是需要pkg生成相应的 .a 文件，深坑!
+由于公司依赖很多都是Cgo写的，mac本地根本不可能编译一些pkg，自然就没有 .a 文件，而且查看issue说这个是一直诟病的问题
+解决答案就是：我还解决不了！还好，就几个pkg，可以忍忍
+自动补全卡1~2秒 之前以为是YCM的锅，后来发现写python 自动补全流畅的一逼，这锅YCM不接
+那肯定出再了golang插件
+运行一些神奇的命令调试
+:profile start profile.log :profile func * :profile file * &amp;quot; At this point do slow actions :profile pause :noautocmd qall!  结果如下
+FUNCTIONS SORTED ON TOTAL TIME 1264 count total (s) self (s) function 1265 21 4.449469 0.009312 &amp;lt;SNR&amp;gt;81_OnTextChangedInsertMode() 1266 18 4.</description>
+    </item>
+    
+    <item>
+      <title>Waiting a new job</title>
+      <link>http://qwding.github.io/post/find_job/</link>
+      <pubDate>Fri, 04 Aug 2017 14:33:08 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/find_job/</guid>
+      <description>公司快黄了，开始找工作 在7月末，8月初，本来也并不是找工作的黄金时期来找工作，也是因为公司快黄了，该走了。
+等出去面试后感觉，并不是很少人在跳槽，有的公司的资历老点的人整天都在面试，工作都要加班到后半夜，感觉也是不容易。
+聊聊HR的坑 天真的我，以为实话实说并没有什么问题。于是在第一周的时候，hr会问，你为什么从前两家离职，我说上一家创业公司内部矛盾比较多，上下层有点脱节。
+可谓是说了老东家的坏话，这TMD，只能说：我是傻逼！
+说老东家坏话简直是一大禁忌，在周末的某个忧虑的晚上，突然深深感受到自己的傻逼，于是在接下来的面试，我都是说公司搬家，上班太远等等为借口了，效果还不错，感觉和hr应该没有聊的什么太大问题。
+技术短板 其实面试的每家公司，基本都可以面到最后一面，但是给offer的寥寥，为什么？！
+总结了一下无非几点
+ 没有大公司经验，其实我并不认为去大公司怎么怎么好，相反可能了解的会更窄；但是这时候发现，却是必不可少的，很多公司更注重你之前的环境，大公司那种内涵吧，亦或许是 “这家伙已经过了大公司的面试，应该还是挺牛逼的”。 没有高并发和分布式经验。高并发指的啥，有几个公司可以说自己的量集很大是高并发，并且碰到很难解决的问题呢。即使是像抢购手机这样的高并发量，其实了解背后，也都是很简单粗暴的方式解决，并没有说你通过牛逼的代码就可以解决。但是人家就是要看你有没有这个经验。 数据库需求，有几个大厂，貌似对数据库要求比较高，像我这种可能没有真做过读写分离，数据库量级没有那么高，被问到一些mysql的尖酸问题，直接gg。 钱要的有点过，人家并不着急要人，这才是根本原因&amp;hellip;.  这些年到底做了什么 看到上面几点，感觉这几年工作到底做了啥，是不是天天上班晃悠了
+有点心酸，谁乐意晃悠到现在感觉找工作又很尴尬呢。找工作真的是一件很看运气的事，在现在公司我工做也是很认真，但是真正的工作内容可能并不适合我现在要找的方向，并不适合。
+也许我在这里一直在擦屁股或者去擦屁股的路上（戴维营欢迎你 2333）。
+说一说碰到的主要问题吧 golang  gc实现，主要是三色标记过程 slice，map实现原理 golang的锁应用 chan的应用，sync.waitGroup，select 的timeout导致cpu激增。 var tmp interface{} = nil; tmp == nil 返回值（答案是false) 怎么优化gc停顿时间 pprof怎么调优 阅读过哪些golang写的源码： k8s，docker，beego等  其实遇到golang的问题，我一般还是都可以应对自如的，基本没啥问题
+几个值得学习的问题  系统设计，比如说有个活动，设计一套系统：匹配对手，出石头剪子布，胜者可抽奖。设计这么套系统。 主要注意的点： 匹配对手，比赛出拳，抽奖，奖池。最主要考察的是，这是一个分布式高并发的系统。 算法，这个不用多说了，多刷题吧，一般不会太难，把递归搞通了可以处理大部分面试的难度。 linux 命令，一般awk，ss -s，sed等等吧，但是sed我是真用的不多，碰到gg。  弄得好不如白话的好 即使不是你做的，你可以白话成你做的
+即使不牛逼，也可以白话的很牛逼
+即使问题并不难，但是也可以白话好解决问题过程
+其实面试还是一个心理挑战，你把面试官忽悠明白，让他认为你行就可以，而能力是其次的，你做事情的能力不如你白话的能力。</description>
+    </item>
+    
+    <item>
+      <title>golang 几大主流框架对比</title>
+      <link>http://qwding.github.io/post/golang_framwork_pk/</link>
+      <pubDate>Fri, 25 Nov 2016 12:48:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/golang_framwork_pk/</guid>
+      <description>先上表格 如下表格是2016-11-24 日调研结果，2~5列为github数据。 benchmark:
+beego VS revel VS martini 三大老框架 beego
+beego 很多人比较熟悉，国人写的，框架主要逻辑是经典MVC形式。
+中间件：中间件可以写在beego内置的prepare方法里。
+取参：取Query需要自己提取，url参数可以用内置方法。
+返回：返回比较固定，想修改返回code比较麻烦。
+缺点：
+书写unit testing很恶心。
+他的侵入式代码风格，还有源代码的多层嵌套，很多人都不太喜欢。
+revel
+revel 也是MVC框架，他的的形式是你在一个配置文件配置路由，当用revel工具执行revel run时候，将在项目目录下生产两个文件/tmp/main.go 和 /routs/routs.go .作用分别为注册路由和绑定路由内参数。
+中间件：中间件可以定义在/init.go 里面。
+取参：内置提供方法，并且有自己内置的validation方法，方便。
+返回：提供多种返回方法。
+缺点：
+也是侵入式代码。
+其他的未实际使用，不予评论
+martini
+书写简单，写起来和之后要讲的echo，gin很像，但是他的性能较echo和gin差了很多。
+从功能上说，并且martini并不像beego和revel那样框架全面，需要自己把架子搭起来。
+所以直接就不考虑了。
+总结
+性能上beego和revel两者不分伯仲，两者的侵入式代码也是为了节省更多的时间，带来了不少便利。对比起来更倾向于用revel做简单的web框架，他的取参和返回值带来的便利性更高一点，并且也会生成路由的testing方法，综合来讲下一次如果写简单的管理界面可能考虑使用revel。
+fasthttp vs httpRouter 两者都作为http的框架，可以替代原生的http，他们的优越都是因为速度快，0占用内存著称。可以考虑将他们作为其他框架的http引擎，会提升很大速度。
+gorilla mux gorilla 最大好处是他出发点为组件化，各个模块单独成一体，你需要哪个模块，拿过来用就行，不需要可以换成其他写法。
+mux是帮你对router更容易管理，其速度来说并不是非常突出。但是docker swarm用的是gorilla mux，足见其有一定可用性。
+对于gorilla其他模块，如果缺少哪个模块组件，完全去任你挑选，安全稳定可靠，开发好帮手。
+echo VS gin 最想说的两个
+无论哪个benchmark，这两个框架的benchmark都已绝对优势排在前列，性能绝对认可。
+代码书写上，两个框架写法也很相似，非常简洁，几行代码可勾勒一个http server,如下为gin一个ping serve，是不是超级简单。
+package main import &amp;quot;github.com/gin-gonic/gin&amp;quot; func main() { r := gin.</description>
+    </item>
+    
+    <item>
+      <title>一场越看越有意思的骂战</title>
+      <link>http://qwding.github.io/post/golang_intersting_1/</link>
+      <pubDate>Tue, 22 Nov 2016 16:00:09 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/golang_intersting_1/</guid>
+      <description>有趣的帖子 查些资料，不小心挖了个坟，观战互喷 https://www.v2ex.com/t/89374
+当然，看口水战的时候往往还是带了不少信息~
+以此膜拜耿直程序员的耿直精神</description>
+    </item>
+    
+    <item>
+      <title>beego 如何不同环境用不同的runmode</title>
+      <link>http://qwding.github.io/post/beego_runmode/</link>
+      <pubDate>Wed, 19 Oct 2016 10:28:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/beego_runmode/</guid>
+      <description>beego runmode修改 除了配置文件设置runmode，想切换环境时候需要手动改，太麻烦，而且容易忘
+想通过如下两种方法尝试，均无效：
+ flag，但是beego本身并没有flag，简直行不通 官方文档里个的方法是 beego.Runmode = &amp;ldquo;dev&amp;rdquo;, 但其实这个方法很鸡肋，很蛋疼，因为读配置文件早在程序运行前执行了，而如果再程序里修改runmode，你在init里用的参数必然还是默认写的，用着基本蛋疼。  我在我本地beego 1.7的环境里又尝试了一下，发现已经没有这个方法了，可能作者也觉得确实蛋疼给删了吧。
+环境变量改变 尝试将配置文件的runmode指定为环境变量，然后指定具体模式。发现居然成功了。不管怎么样，确实这个办法还是一个不错的解决方案了
+加上docker更好用 因为本来用docker，这样直接在Dockerfile里设置ENV，部署线上的时候，直接用构建好的镜像启动就ok了，什么都不用改了。
+ 懒人使人进步</description>
+    </item>
+    
+    <item>
+      <title>How golang slice Semi - pointer.</title>
+      <link>http://qwding.github.io/post/slice_args/</link>
+      <pubDate>Sun, 09 Oct 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/slice_args/</guid>
+      <description>起因 刷leetcode的77题时候，使用了递归方法，并且使用数组时候如下
+result := make([][]int, 0, length+1) recursive([]int{}, 1, n, k, result)  第一次使用了cap声明slice，这样的好处是append时候在length后添加数据，并且保证长度够，append时候不会重新申请地址
+但是跑的时候发现，recursive()后，在返回到此段代码，居然什么都没有！result值没变。
+什么？ slice不是传说的指针传递么？ 先看下官方数组结构样子 当然，一直知道数组是半指针，就是将数组的地址的值传进去。在函数里是改变不了指针的值，但是可以操作指针指向的数据，详细的google有很多
+我想象的是这样：函数收到的是数组的头地址(就是图最上面的指针）,length和cap等数据，这样可以完全接管数组的操作了
+但是上述起因里出现的问题却不是这样，到底是什么原因呢？于是写了测试代码
+func main() { result := make([]int, 0, 10) addr := &amp;amp;result fmt.Println(&amp;quot;result:&amp;quot;, result, &amp;quot;addr:&amp;quot;, unsafe.Pointer(addr)) for i := 0; i &amp;lt; 10; i++ { functions(result) result = append(result, i) //appendData(result,i) } fmt.Println(&amp;quot;result:&amp;quot;, result, &amp;quot;addr:&amp;quot;, unsafe.Pointer(addr)) } func functions(arr []int) { addr := &amp;amp;arr if len(arr) &amp;gt; 0 { fmt.</description>
+    </item>
+    
+    <item>
+      <title>go map,slice,array 遍历性能测试 </title>
+      <link>http://qwding.github.io/post/gotest_map_array_slice/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/gotest_map_array_slice/</guid>
+      <description>#就是随便试试 听说goalng的map和slice的遍历性能差的不是一点半点，于是没事写个benchmark来玩玩 代码
+package testings import( &amp;quot;testing&amp;quot; &amp;quot;strconv&amp;quot; ) var length = 1000 var maps map[string]string var slices []string var arrays [1000]string func init(){ maps = make(map[string]string,length) slices = make([]string,length) for i:=0;i&amp;lt;length;i++{ maps[strconv.Itoa(i)] = &amp;quot;abc&amp;quot; slices[i] = &amp;quot;abc&amp;quot; arrays[i] = &amp;quot;abc&amp;quot; } } func BenchmarkIterateMap(b *testing.B){ for i:=0;i&amp;lt;b.N;i++{ for _,_ = range maps{ } } } func BenchmarkIterateSlices(b *testing.B){ for i:=0;i&amp;lt;b.N;i++{ for _,_ = range slices{ } } } func BenchmarkIterateArrays(b *testing.</description>
+    </item>
+    
+    <item>
+      <title>golang: change instance address in his method</title>
+      <link>http://qwding.github.io/post/golang_struct_func_changeaddr/</link>
+      <pubDate>Wed, 01 Jun 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/golang_struct_func_changeaddr/</guid>
+      <description>前提回顾 对于结构体中的指针应用，大部分可能知道的是如下两代码的区别
+func (a *AA) funcA()
+func (a AA) funcB()
+区别在于，我们在funcA内修改a的值，是可以成功的，但是在funcB修改a的值是失败的。
+因为funcA中的a是指针传递，funcB中的a是值传递。这个大家都知道。
+今天话题 先上代码
+package main import ( &amp;quot;fmt&amp;quot; ) type AA struct { xyz string opq string } func (this *AA) Change() { b := &amp;amp;AA{xyz: &amp;quot;xyz1&amp;quot;, opq: &amp;quot;opq1&amp;quot;} this = b fmt.Println(&amp;quot;in this:&amp;quot;, this, &amp;quot;addr:&amp;quot;, &amp;amp;this) } func main() { a := &amp;amp;AA{xyz: &amp;quot;xyz0&amp;quot;, opq: &amp;quot;opq0&amp;quot;} fmt.Println(&amp;quot;before a:&amp;quot;, a, &amp;quot;addr:&amp;quot;, &amp;amp;a) a.Change() fmt.Println(&amp;quot;after a:&amp;quot;, a, &amp;quot;addr:&amp;quot;, &amp;amp;a) }  那么问题来了，请回答一下程序执行过程的三个输出是什么。</description>
+    </item>
+    
+  </channel>
+</rss>

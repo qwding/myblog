@@ -1,0 +1,1147 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        
+            
+                <title>Install portus by docker and configration read.</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.34" />
+        
+
+
+        
+        
+            <meta name="description" content="portus的docker容器搭建">
+        
+
+        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Install portus by docker and configration read."/>
+<meta name="twitter:description" content="portus的docker容器搭建"/>
+
+        <meta property="og:title" content="Install portus by docker and configration read." />
+<meta property="og:description" content="portus的docker容器搭建" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://qwding.github.io/post/portus/" />
+
+
+
+<meta property="article:published_time" content="2016-04-20T11:48:19&#43;08:00"/>
+
+<meta property="article:modified_time" content="2016-04-20T11:48:19&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+        
+<meta itemprop="name" content="Install portus by docker and configration read.">
+<meta itemprop="description" content="portus的docker容器搭建">
+
+
+<meta itemprop="datePublished" content="2016-04-20T11:48:19&#43;08:00" />
+<meta itemprop="dateModified" content="2016-04-20T11:48:19&#43;08:00" />
+<meta itemprop="wordCount" content="281">
+
+
+
+<meta itemprop="keywords" content="" />
+
+        
+
+        
+
+        
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="/css/google-font.css" />
+            <link rel="stylesheet" href="/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="/css/main.css" />
+            <link rel="stylesheet" href="/css/add-on.css" />
+            <link rel="stylesheet" href="/css/monokai-sublime.css">
+        
+
+        
+
+        
+        
+        
+            
+        
+    </head>
+    <body>
+
+        
+        <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+        <h2><a href="/">QWDing blog</i></a></h2>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/post">
+                        
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/relax">
+                        
+                            <i class="fa fa-gamepad">&nbsp;</i>Relax
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/persional">
+                        
+                            <i class="fa fa-child">&nbsp;</i>Persional
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/categories">
+                        
+                            <i class="fa fa-tags">&nbsp;</i>Categories
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about">
+                        
+                            <i class="fa fa-info">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="q" value="site:http://qwding.github.io/">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="q" value="site:http://qwding.github.io/">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/post">
+                            <h3>
+                                
+                                    <i class="fa fa-newspaper-o">&nbsp;</i>
+                                
+                                Blog
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/relax">
+                            <h3>
+                                
+                                    <i class="fa fa-gamepad">&nbsp;</i>
+                                
+                                Relax
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/persional">
+                            <h3>
+                                
+                                    <i class="fa fa-child">&nbsp;</i>
+                                
+                                Persional
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            <h3>
+                                
+                                    <i class="fa fa-tags">&nbsp;</i>
+                                
+                                Categories
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            <h3>
+                                
+                                    <i class="fa fa-info">&nbsp;</i>
+                                
+                                About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    <li>
+                        <a href="http://qwding.github.io/post/vim_python_ycm/"><p>解决python 的ycm跳转不好使</p></a>
+                    </li>
+                
+                    <li>
+                        <a href="http://qwding.github.io/post/vim_golang/"><p>用vim写golang踩坑</p></a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&text=Install%20portus%20by%20docker%20and%20configration%20read.&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+    <header>
+    <div class="title">
+        
+            <h1><a href="http://qwding.github.io/post/portus/">Install portus by docker and configration read.</a></h1>
+            
+        
+        
+            <p>portus的docker容器搭建</p>
+        
+    </div>
+    <div class="meta">
+        
+            
+        
+
+        <time class="published"
+            datetime='2016-04-20'>
+            April 20, 2016</time>
+        <span class="author"></span>
+        
+            <p>2 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+    <section id="social-share">
+        <ul class="icons">
+            
+
+
+<li><a href="//twitter.com/share?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&text=Install%20portus%20by%20docker%20and%20configration%20read.&via=" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+</a></li>
+
+
+<li><a href="//plus.google.com/share?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-google-plus"></i>
+    <p>Google+</p>
+</a></li>
+
+
+<li><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn facebook">
+    <i class="fa fa-facebook"></i>
+    <p>Facebook</p>
+</a></li>
+
+
+<li><a href="//reddit.com/submit?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn reddit">
+    <i class="fa fa-reddit-alien"></i>
+    <p>Reddit</p>
+</a></li>
+
+
+<li><a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>
+
+
+<li><a href="//www.stumbleupon.com/submit?url=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f&title=Install%20portus%20by%20docker%20and%20configration%20read." target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>
+
+
+<li><a href="mailto:?subject=Check out this post by &body=http%3a%2f%2fqwding.github.io%2fpost%2fportus%2f" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>Email</p>
+</a></li>
+
+        </ul>
+    </section>
+    
+
+    <div id="content">
+        
+
+<h3 id="一般形式">一般形式</h3>
+
+<p>在官方文档，或者百度谷歌，搜到的portus一般都是compose形式搭建，这样好处是操作无脑</p>
+
+<p>但是一般情况下我们肯定是自己要更灵活一些的，肯定用docker容器形式更舒服一点。可是去dockerhub一搜，各种版本的镜像，查看dockerfile很多人都自己加了一些内容，对于不会ruby的人来说，并不知道那些操作都说干啥的。</p>
+
+<h3 id="自己研究研究">自己研究研究</h3>
+
+<p>github master分支上有dockerfile，如下</p>
+
+<pre><code>FROM library/rails:4.2.2
+MAINTAINER Flavio Castelli &lt;fcastelli@suse.com&gt;
+
+ENV COMPOSE=1
+EXPOSE 3000
+
+WORKDIR /portus
+COPY Gemfile* ./
+RUN bundle install --retry=3
+
+# Install phantomjs, this is required for testing and development purposes
+# There are no official deb packages for it, hence we built it inside of the
+# open build service.
+RUN echo &quot;deb http://download.opensuse.org/repositories/home:/flavio_castelli:/phantomjs/Debian_8.0/ ./&quot; &gt;&gt; /etc/apt/sources.list
+RUN wget http://download.opensuse.org/repositories/home:/flavio_castelli:/phantomjs/Debian_8.0/Release.key &amp;&amp; \
+  apt-key add Release.key &amp;&amp; \
+  rm Release.key
+RUN apt-get update &amp;&amp; \
+    apt-get install -y --no-install-recommends phantomjs &amp;&amp; \
+    rm -rf /var/lib/apt/lists/*
+
+ADD . .
+</code></pre>
+
+<p>于是直接用那个dockerfile直接build一个镜像。参考别人给出的一些docker run参数启动，并成功了。</p>
+
+<pre><code>docker run -d -e RAILS_ENV=production \
+	-e RACK_ENV=production \
+	-e PORTUS_SECRET_KEY_BASE=secret-goes-here \
+	-e PORTUS_KEY_PATH=/certs/server-key.pem \
+	-e PORTUS_PASSWORD=portuspw \
+	-e PORTUS_CHECK_SSL_USAGE_ENABLED=false \
+	-e PORTUS_MACHINE_FQDN_VALUE=192.168.56.101 \
+	-e PORTUS_PRODUCTION_HOST=192.168.56.101 \
+	-e PORTUS_PRODUCTION_USERNAME=portus \
+	-e PORTUS_PRODUCTION_PASSWORD=portus \
+	-e PORTUS_PRODUCTION_DATABASE=portus \
+	-v /sslkeys:/certs \
+	-v /root/terminal/Portus/:/portus \
+	--restart=always \
+	-p 5001:3000 portus:v1 puma -b tcp://0.0.0.0:3000 -w 3
+</code></pre>
+
+<p>解释一下这些参数</p>
+
+<ul>
+<li>PORTUS_SECRET_KEY_BASE 是rails 4.0以后出的一个web安全参数，一般要rake secret生成一个很长很长的随机串，发现随意写个串也无妨。</li>
+<li>PORTUS_KEY_PATH 猜测是对应registry给出那个crt的。</li>
+<li>PORTUS_PASSWORD 这个参数有意思。在你创建好portus后，需要创建一个用户叫 portus。密码就是这个密码。这个用户的目的是为了同步镜像用的。（之后说）</li>
+<li>PORTUS_CHECK_SSL_USAGE_ENABLED 因为我没有官方签发证书，所以用http，如果https，在registry的notifications时候会发不过去。</li>
+<li>PORTUS_MACHINE_FQDN_VALUE 就是你的portus要配置的域名。</li>
+<li>PORTUS_PRODUCTION_HOST，PORTUS_PRODUCTION_USERNAME，PORTUS_PRODUCTION_PASSWORD，PORTUS_PRODUCTION_DATABASE这几个就是数据库的地址，帐号，密码，数据库</li>
+<li>puma -b tcp://0.0.0.0:3000 -w 3 是执行的CMD，试了一下，这个镜像默认是什么都不执行的，所以启动可以添加这个命令，如果不想每次加可以在dockerfile里加上CMD.</li>
+</ul>
+
+<h3 id="简化一下">简化一下</h3>
+
+<p>显然，如上启动方式跟了一大堆参数是很烦的，也不是你想的。当然那就把它们放到配置文件里。</p>
+
+<p>主要有三个配置文件都放在了 Portus/config 文件夹下。分别为 config.yml, database.yml, secrets.yml</p>
+
+<p>将几个env变量都可以配置到文件的production里。</p>
+
+<p>值得注意的是，PORTUS_MACHINE_FQDN_VALUE这个变量在2.0.3版本里是放在了secrets.yml 里，但是如果你用的是portus的master分支，最新的代码是放在config.yml里的。一坑。</p>
+
+<p>所以启动方式可以改成：</p>
+
+<pre><code>docker run -d \
+	-e RAILS_ENV=production \
+	-e RACK_ENV=production \
+	-v /sslkeys:/certs \
+	-v /root/terminal/Portus/:/portus \
+	-p 5001:3000 \
+	--restart=always \
+	portus:v1 puma -b tcp://0.0.0.0:3000 -w 3
+</code></pre>
+
+<p>不同版本有的参数配置不太一样，参数调整好以后就可以出现登录页面了。就可以开始操作了。</p>
+
+<h3 id="镜像同步">镜像同步</h3>
+
+<p>两种方法： 一段时间同步一次。每次push操作更新一次。</p>
+
+<ul>
+<li>一段时间同步一次</li>
+</ul>
+
+<p>在我们登录以后，点击admin选项，会出现红色提示，user portus not exist。这时候你可以先创建portus用户，密码为secrets.yml里填写的密码。这个用户的作用就是同步时候用这个用户当做默认用户同步。</p>
+
+<p>我们在容器里路径为 /Portus 运行 <code>RAILS_ENV=production CATALOG_CRON=&quot;60.seconds&quot; bundle exec crono</code> 他就会每隔60秒，用用户portus请求一次registry的 /v2/_catalog这个api查阅所有镜像。我们查看portus 容器日志会收到这个用户发来的请求。</p>
+
+<p>如果你发现同步失败，请检查是否给了portus admin权限，只有admin权限portus才可以访问所有镜像。</p>
+
+<p>如果想让这个作为单独容器来同步，可以将命令写成个脚本放到portus镜像里 /crono.sh。然后启动容器时候把命令改成 ./crono.sh就行。</p>
+
+<ul>
+<li>每次push请求一次</li>
+</ul>
+
+<p>就是registry 里配置了 notifications，每次push会来向notifications配置的地址发请求。portus server收到请求后来更改数据库。</p>
+
+<h3 id="问题">问题</h3>
+
+<ol>
+<li><p>本地配置好以后，想试试域名访问有没有问题，结果改成域名以后一直401。</p>
+
+<p>后来突然想到，在登录第一次就配置了regitry server信息。应该是这个server名字改变了，所以拒绝了访问。</p>
+
+<p>修复方法： 直接到数据库的registry表将地址改成域名就行。</p></li>
+
+<li><p>push镜像的时候报错：</p>
+
+<pre><code>Error parsing HTTP response: invalid character '&lt;' looking for beginning of value: &quot;&lt;html&gt;\r\n&lt;head&gt;&lt;title&gt;413 Request Entity Too Large&lt;/title&gt;&lt;/head&gt;\r\n&lt;body bgcolor=\&quot;white\&quot;&gt;\r\n&lt;center&gt;&lt;h1&gt;413 Request Entity Too Large&lt;/h1&gt;&lt;/center&gt;\r\n&lt;hr&gt;&lt;center&gt;nginx/1.9.14&lt;/center&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;\r\n&quot;
+</code></pre>
+
+<p>这个问题是因为我们使用了http，并配置了nginx，但是默认只有https才允许有basic auth，所以认证失败了。换成https就行。
+issue地址：<a href="https://github.com/docker/docker-registry/issues/298#issuecomment-39845868">https://github.com/docker/docker-registry/issues/298#issuecomment-39845868</a></p></li>
+
+<li><p>portus读配置的顺序 配置文件 &gt; -e 参数.</p></li>
+
+<li><p>registry可以不配置auth并使用portus的，登录portus时候添加registry skip error就可以，但是使用的时候会报很多错误，语言bug，改改代码就ok。</p></li>
+
+<li><p>registry 的issuer 对应的就是portus/config/FQDN的value，文档没有说明白，坑的一逼。</p></li>
+
+<li><p>没有api，如果不想直接操作web来创建用户等，就需要自己写方法去操作数据库了。</p></li>
+</ol>
+
+    </div>
+
+    <footer>
+        <ul class="stats">
+    
+        
+
+        
+        
+            <li>
+                
+                
+                    
+
+                    
+
+                    
+                        <i class="fa fa-tags">&nbsp;</i>
+                    
+
+                    
+                        Categories
+                    
+                
+            </li>
+        
+    
+
+    
+    
+        <li><a href='/categoriesportus'>portus</a></li>
+    
+        <li><a href='/categoriesregistry'>registry</a></li>
+    
+</ul>
+
+    </footer>
+</article>
+<ul class="actions pagination">
+    
+        <li><a href="http://qwding.github.io/post/hugo_vs_hexo/"
+                class="button big previous">hugo vs hexo</a></li>
+    
+
+    
+        <li><a href="http://qwding.github.io/post/golang_struct_func_changeaddr/"
+                class="button big next">golang: change instance address in his method</a></li>
+    
+</ul>
+
+
+
+    
+        <article class="post">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "puppy" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </article>
+    
+
+
+    </div>
+    
+<section id="sidebar">
+
+    
+        <section id="intro">
+            
+            
+                
+                    <a href="/" class="logo"><img src="/img/dog.jpeg" alt="Qwding blog" /></a>
+                
+            
+            
+                <header>
+                    <h2>QWDing blog</h2>
+                    <p>懒癌晚期</p>
+                </header>
+            
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/qwding" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:edcapding@163.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+        </section>
+
+    
+        <section id="recent-posts">
+            <ul class="posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+                    
+                
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://qwding.github.io/post/vim_python_ycm/">解决python 的ycm跳转不好使</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2018-03-01'>
+                                    March 1, 2018</time>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <h3><a href="http://qwding.github.io/post/vim_golang/">用vim写golang踩坑</a></h3>
+                                
+                                    
+                                
+                                <time class="published" datetime=
+                                    '2018-02-12'>
+                                    February 12, 2018</time>
+                            </header>
+                        </article>
+                    </li>
+                
+
+                
+                    <li>
+                        <ul class="actions">
+                            <li><a href=
+                            
+                                /
+                            
+                            class="button">View more posts</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+    
+    
+    
+        <section id="categories">
+            <ul class="posts">
+                <header>
+                    <h3><a href="/categories/">Categories</a></h3>
+                </header>
+
+                
+                    
+                
+
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/golang/">golang</a>
+                                <span style="float:right;">8</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/beego/">beego</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/docker/">docker</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/game/">game</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/vim/">vim</a>
+                                <span style="float:right;">3</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/linux/">linux</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/live/">live</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/mongo/">mongo</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/revel/">revel</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/slice/">slice</a>
+                                <span style="float:right;">2</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/array/">array</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/benchmark/">benchmark</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/bin/">bin</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/dockerfile/">dockerfile</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/dota/">dota</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/echo/">echo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/evernote/">evernote</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hexo/">hexo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/hugo/">hugo</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/job/">job</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/keng/">keng</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/map/">map</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/mysql/">mysql</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/permission/">permission</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/pointer/">pointer</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/portus/">portus</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/registry/">registry</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/shell/">shell</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/testing/">testing</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+                    <li>
+                        <article>
+                            <header>
+                                <a href="/categories/youdao/">youdao</a>
+                                <span style="float:right;">1</span>
+                            </header>
+                        </article>
+                    </li>
+                
+            </ul>
+        </section>
+    
+
+    
+        
+        <section class="blurb">
+            <h2>About</h2>
+            <p>没错！懒癌晚期！就是爱打游戏！</p>
+
+            <ul class="actions">
+                <li><a href="/about/" class="button">Learn More</a></li>
+            </ul>
+        </section>
+        
+
+    
+        <section id="footer">
+            <ul class="icons">
+                
+                
+                    
+<li><a href="//github.com/qwding" target="_blank" title="GitHub" class="fa fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:edcapding@163.com" title="Email" class="fa fa-envelope"></a></li>
+
+
+                
+            </ul>
+
+            <p class="copyright">&copy; QWDing blog. Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>. Ported by <a href="//github.com/jpescador" target="_blank">Julio Pescador</a>. Powered by <a href="//gohugo.io" target="_blank">Hugo</a></p>
+        </section>
+
+</section>
+
+            </div>
+        <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+        
+
+        
+        
+            
+        
+
+        
+        
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/skel.min.js"></script>
+            <script src="/js/util.js"></script>
+            <script src="/js/main.js"></script>
+            <script src="/js/backToTop.js"></script>
+            <script src="/js/highlight.pack.js"></script>
+            <script src="/js/google_analytics.js"></script>
+        
+
+        
+
+            
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+    </body>
+</html>
+

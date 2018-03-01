@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on QWDing blog</title>
+    <link>http://qwding.github.io/categories/</link>
+    <description>Recent content in Categories on QWDing blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jun 2016 14:28:44 +0800</lastBuildDate>
+    
+	<atom:link href="http://qwding.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Array</title>
+      <link>http://qwding.github.io/categories/array/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/array/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beego</title>
+      <link>http://qwding.github.io/categories/beego/</link>
+      <pubDate>Fri, 25 Nov 2016 12:48:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/beego/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmark</title>
+      <link>http://qwding.github.io/categories/benchmark/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/benchmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bin</title>
+      <link>http://qwding.github.io/categories/bin/</link>
+      <pubDate>Fri, 25 Nov 2016 12:48:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/bin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://qwding.github.io/categories/docker/</link>
+      <pubDate>Thu, 20 Oct 2016 10:37:02 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>http://qwding.github.io/categories/dockerfile/</link>
+      <pubDate>Thu, 20 Oct 2016 10:37:02 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/dockerfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dota</title>
+      <link>http://qwding.github.io/categories/dota/</link>
+      <pubDate>Fri, 04 Aug 2017 15:55:14 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/dota/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Echo</title>
+      <link>http://qwding.github.io/categories/echo/</link>
+      <pubDate>Fri, 25 Nov 2016 12:48:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/echo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Evernote</title>
+      <link>http://qwding.github.io/categories/evernote/</link>
+      <pubDate>Sun, 28 Aug 2016 23:53:36 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/evernote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game</title>
+      <link>http://qwding.github.io/categories/game/</link>
+      <pubDate>Tue, 15 Aug 2017 16:20:37 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>http://qwding.github.io/categories/golang/</link>
+      <pubDate>Mon, 12 Feb 2018 10:28:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hexo</title>
+      <link>http://qwding.github.io/categories/hexo/</link>
+      <pubDate>Fri, 08 Apr 2016 18:51:19 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>http://qwding.github.io/categories/hugo/</link>
+      <pubDate>Fri, 08 Apr 2016 18:51:19 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Job</title>
+      <link>http://qwding.github.io/categories/job/</link>
+      <pubDate>Fri, 04 Aug 2017 14:33:08 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/job/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Keng</title>
+      <link>http://qwding.github.io/categories/keng/</link>
+      <pubDate>Mon, 24 Apr 2017 19:43:29 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/keng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>http://qwding.github.io/categories/linux/</link>
+      <pubDate>Wed, 22 Feb 2017 18:11:04 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Live</title>
+      <link>http://qwding.github.io/categories/live/</link>
+      <pubDate>Fri, 08 Apr 2016 12:06:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/live/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Map</title>
+      <link>http://qwding.github.io/categories/map/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongo</title>
+      <link>http://qwding.github.io/categories/mongo/</link>
+      <pubDate>Thu, 20 Oct 2016 10:37:02 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/mongo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>http://qwding.github.io/categories/mysql/</link>
+      <pubDate>Tue, 07 Jun 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Permission</title>
+      <link>http://qwding.github.io/categories/permission/</link>
+      <pubDate>Tue, 21 Feb 2017 15:05:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/permission/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pointer</title>
+      <link>http://qwding.github.io/categories/pointer/</link>
+      <pubDate>Wed, 01 Jun 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/pointer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Portus</title>
+      <link>http://qwding.github.io/categories/portus/</link>
+      <pubDate>Wed, 20 Apr 2016 11:48:19 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/portus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Registry</title>
+      <link>http://qwding.github.io/categories/registry/</link>
+      <pubDate>Wed, 20 Apr 2016 11:48:19 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/registry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Revel</title>
+      <link>http://qwding.github.io/categories/revel/</link>
+      <pubDate>Fri, 25 Nov 2016 12:48:31 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/revel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>http://qwding.github.io/categories/shell/</link>
+      <pubDate>Tue, 07 Jun 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slice</title>
+      <link>http://qwding.github.io/categories/slice/</link>
+      <pubDate>Sun, 09 Oct 2016 19:19:58 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/slice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>http://qwding.github.io/categories/testing/</link>
+      <pubDate>Mon, 27 Jun 2016 14:28:44 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>http://qwding.github.io/categories/vim/</link>
+      <pubDate>Thu, 01 Mar 2018 10:28:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Youdao</title>
+      <link>http://qwding.github.io/categories/youdao/</link>
+      <pubDate>Sun, 28 Aug 2016 23:53:36 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/categories/youdao/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
