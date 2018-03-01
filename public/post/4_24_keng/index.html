@@ -10,7 +10,7 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.34" />
+        <meta name="generator" content="Hugo 0.37" />
         
 
 
@@ -23,7 +23,8 @@
             
         
 
-        <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="docker golang 今天遇到的坑 吐槽"/>
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="docker golang 今天遇到的坑 吐槽"/>
 <meta name="twitter:description" content="过程是这样的 因需求，写了一个小小的golang项目，但是在打包docker封装时候遇到了很奇怪的问题。
 首先是我在linux编译好的程序，想打进alpine镜像（在我本地mac电脑做），发现打进去之后运行不了程序，报/bin/bash : binary not found . google一下，有说版本的，也有说别的的，但是关键是，这个镜像当时打包其他golang binary都没有问题。
 然后我在我编译那台机尝试打包镜像，pull一个alpine镜像。bug&hellip; 跟docker启动device map有关&hellip;. 为了不影响其他应用，忍了把，我不用这个机器了行吧
