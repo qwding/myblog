@@ -19,13 +19,8 @@
                 <li>
                     <article>
                         <header>
-                            {{ if ne $value.Name "" }}
-                                <a href="{{"/" | relURL}}{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
-                                <span style="float:right;">{{ $value.Count }}</span>
-                            {{ else }}
-                                Uncategorized
-                                <span style="float:right;">{{ $value.Count }}</span>
-                            {{ end }}
+                            <a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a>
+                            <span style="float:right;">{{ $value.Count }}</span>
                         </header>
                     </article>
                 </li>

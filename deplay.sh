@@ -22,6 +22,7 @@ hugo
 
 
 cd public
+# 记得将public目录的仓库设置为 qwding.github.io
 
 echo -e "\033[0;32mCommit new html files...\033[0m"
 git add -A

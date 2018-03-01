@@ -4,7 +4,7 @@ categories = ["Go"]
 date = "2014-04-02"
 description = ""
 featured = "pic02.jpg"
-featuredalt = "Pic 2"
+featuredalt = ""
 featuredpath = "date"
 linktitle = ""
 title = "(Hu)go Template Primer"
@@ -239,7 +239,7 @@ instead of depending on the context.
 ```
 {{ $title := .Site.Title }}
 {{ range .Params.tags }}
-<li> <a href="/tags/{{ . | urlize }}">
+<li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">
     {{ . }}</a> - {{ $title }} </li>
 {{ end }}
 ```

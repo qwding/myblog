@@ -1,13 +1,10 @@
 +++
 author = ""
-categories = [""]
-date = ""
+categories = []
 description = ""
-featured = ""
-featuredalt = ""
-featuredpath = ""
 linktitle = ""
-title = ""
+featured = ""
+featuredpath = ""
+featuredalt = ""
 type = "post"
-
 +++
