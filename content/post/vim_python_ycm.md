@@ -29,7 +29,6 @@ title = "解决python 的ycm跳转不好使"
 贴下现在配置
 
 ```
-
 if &compatible
   set nocompatible "去掉有关vi一致性模式，避免以前版本的bug和局限 
 end 
