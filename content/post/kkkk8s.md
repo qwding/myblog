@@ -1,20 +1,23 @@
 +++
 author = "qwding"
 categories = ["k8s"]
-date = "2018-11-15T12:48:31+08:00"
+date = "2018-11-15T10:28:28+08:00"
 description = "k8s"
 featured = ""
 featuredpath = ""
 linktitle = ""
-title = "又看了 k8s"
+title = "k8s点点理解"
 
 +++
+
+
 
 ### 前缘
 
 15年在某云公司，搞k8s，很基础，各种调api，公司6号员工，本想一直坚持干下去，可惜我这小暴脾气，后来走了。
 
 那时k8s还没有1.0，使用各种不稳定，各种杂七杂八问题
+
 
 ### 现在
 
