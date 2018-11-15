@@ -18,22 +18,12 @@
   </url>
   
   <url>
-    <loc>http://qwding.github.io/post/web_game/</loc>
-    <lastmod>2017-08-15T16:20:37+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://qwding.github.io/relax/web_game/</loc>
     <lastmod>2017-08-15T16:20:37+08:00</lastmod>
   </url>
   
   <url>
     <loc>http://qwding.github.io/persional/ti7/</loc>
-    <lastmod>2017-08-04T15:55:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://qwding.github.io/post/ti7/</loc>
     <lastmod>2017-08-04T15:55:14+08:00</lastmod>
   </url>
   
@@ -59,11 +49,6 @@
   
   <url>
     <loc>http://qwding.github.io/persional/inuyasha/</loc>
-    <lastmod>2016-12-09T17:40:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://qwding.github.io/post/inuyasha/</loc>
     <lastmod>2016-12-09T17:40:21+08:00</lastmod>
   </url>
   
@@ -120,11 +105,6 @@
   <url>
     <loc>http://qwding.github.io/post/portus/</loc>
     <lastmod>2016-04-20T11:48:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://qwding.github.io/post/warm_house/</loc>
-    <lastmod>2016-04-14T18:18:02+08:00</lastmod>
   </url>
   
   <url>
@@ -304,6 +284,12 @@
   
   <url>
     <loc>http://qwding.github.io/post/</loc>
+    <lastmod>2018-03-01T10:28:28+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://qwding.github.io/categories/python/</loc>
     <lastmod>2018-03-01T10:28:28+08:00</lastmod>
     <priority>0</priority>
   </url>

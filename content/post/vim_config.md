@@ -23,6 +23,9 @@ title = "转战vim"
 
 于是果断放弃了spf13的配置，自己搞自己需要的。
 
+安装bundle管理
+`git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+
 贴出配置
 ```
 if &compatible
