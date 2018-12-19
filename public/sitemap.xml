@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://qwding.github.io/post/kkkk8s/</loc>
+    <lastmod>2018-11-15T10:28:28+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://qwding.github.io/post/vim_python_ycm/</loc>
     <lastmod>2018-03-01T10:28:28+08:00</lastmod>
   </url>
@@ -223,6 +228,12 @@
   </url>
   
   <url>
+    <loc>http://qwding.github.io/categories/k8s/</loc>
+    <lastmod>2018-11-15T10:28:28+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://qwding.github.io/categories/keng/</loc>
     <lastmod>2017-04-24T19:43:29+08:00</lastmod>
     <priority>0</priority>
@@ -284,7 +295,7 @@
   
   <url>
     <loc>http://qwding.github.io/post/</loc>
-    <lastmod>2018-03-01T10:28:28+08:00</lastmod>
+    <lastmod>2018-11-15T10:28:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -296,7 +307,7 @@
   
   <url>
     <loc>http://qwding.github.io/</loc>
-    <lastmod>2018-03-01T10:28:28+08:00</lastmod>
+    <lastmod>2018-11-15T10:28:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   

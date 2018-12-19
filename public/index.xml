@@ -6,10 +6,22 @@
     <description>Recent content on QWDing blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Mar 2018 10:28:28 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Nov 2018 10:28:28 +0800</lastBuildDate>
     
 	<atom:link href="http://qwding.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>k8s点点理解</title>
+      <link>http://qwding.github.io/post/kkkk8s/</link>
+      <pubDate>Thu, 15 Nov 2018 10:28:28 +0800</pubDate>
+      
+      <guid>http://qwding.github.io/post/kkkk8s/</guid>
+      <description>前缘 15年在某云公司，搞k8s，很基础，各种调api，公司6号员工，本想一直坚持干下去，可惜我这小暴脾气，后来走了。
+那时k8s还没有1.0，使用各种不稳定，各种杂七杂八问题
+现在 突然间给我分到现在组，要弄k8s，在看他的时候，还是以前的样子
+点点理解  k8s 自己搞了个大网 所有信息放到了etcd 其他组件访问etcd，做该做的事  我感觉这三点概括了k8s整体工作流程，至于其他组件干了什么，google现在一大堆了</description>
+    </item>
     
     <item>
       <title>解决python 的ycm跳转不好使</title>
